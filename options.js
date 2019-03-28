@@ -1,7 +1,7 @@
 //save the user's selected color as the background color and save it in the chrome.storage to retrieve it later
 function save_options() {
   var color = String("#" + document.getElementById('color').value);
-  chrome.storage.sync.set({color: color}, function() {
+  chrome.storage.sync.set({color: color,fontStyle:"bold"}, function() {
     var status = document.getElementById('status');
     status.textContent = 'Options saved';
     setTimeout(function() {
